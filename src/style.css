@@ -1,0 +1,173 @@
+:root {
+  --cell-size: 90px;
+  --board-bg: #22373f;
+  --slot-bg: #345460;
+  --player-red: #df2858;
+  --player-yellow: #ffc910;
+}
+
+.player1 { background-color: var(--player-red); }
+.player2 { background-color: var(--player-yellow); }
+
+@font-face {
+    font-family: 'RuddyRegular';
+    src: url('Fonts/Ruddy/Ruddy\ Regular.otf');
+}
+@font-face {
+    font-family: 'RuddyBold';
+    src: url('Fonts/Ruddy/Ruddy\ Bold.otf');
+}
+
+h1 {
+   font-family: 'RuddyBold';
+   text-align: center;
+   font-size: 4em;
+   margin: 0.3em;
+   user-select: none; 
+}
+
+
+body {
+  font-family: 'RuddyRegular';
+  background: #19272d;
+  color: #ffffff;
+  margin: auto 10em;
+  padding: 0;
+}
+
+p{
+  text-align: center;
+}
+
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.board {
+  position: relative;
+  margin: auto;
+  background: var(--board-bg);
+  padding: 12px;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+div {
+  outline: none;     
+  user-select: none;  
+}
+
+.board-row {
+  display: flex;
+}
+
+.board-cell {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  padding: 6px;
+}
+
+.cell {
+  width: 100%;
+  height: 100%;
+  background: var(--slot-bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.rouge {
+  color :#df2858;
+}
+
+.jaune {
+color :#ffc910;
+}
+
+
+.cell .jeton {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.cell.red .jeton {
+  background: var(--player-red);
+}
+
+.cell.yellow .jeton {
+  background:var(--player-yellow);
+}
+
+.board-cell.winning .cell {
+  outline: 4px solid #ffffff;
+  border-radius: 8px;
+}
+
+.scoreboard {
+  background: var(--board-bg);
+  padding: 30px;
+  border-radius: 8px;
+  min-width: 240px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.scoreboard .history {
+  max-height: 220px;
+  overflow: auto;
+  margin-top: 8px;
+}
+
+.scoreboard-actions {
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+button {
+  display: flex;
+  font-family: 'RuddyBold';
+  color : white;
+  padding: 12px 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #37c1c4;
+  border-radius: 100px;
+  border: none;
+  margin: 2em auto;
+}
+
+button:hover { transform: translateY(-1px); }
+
+.turn {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.gameover {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.falling-jeton {
+  position: absolute;
+  width: calc(var(--cell-size) - 20px); 
+  height: calc(var(--cell-size) - 20px);
+  border-radius: 50%;
+  transition: top 0.2s ease-in;
+  pointer-events: none;
+  z-index: 20;
+}
