@@ -1,18 +1,26 @@
-# React + Vite
+Puissance 4 React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Petit projet ReactJS reproduisant le célèbre jeu Puissance 4, avec gestion de l’historique des victoires.
 
-Currently, two official plugins are available:
+Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Cette application permet de jouer à deux joueurs au Puissance 4 directement dans le navigateur.
+Un système d’historique des victoires est inclus et sauvegardé dans le localStorage pour suivre les scores au fil des parties.
 
-## React Compiler
+Fonctionnalités
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+Jeu à deux joueurs (alternance des tours)
 
-Note: This will impact Vite dev & build performances.
+Détection automatique des victoires et égalités
 
-## Expanding the ESLint configuration
+Historique des parties gagnées par joueur
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Interface interactive simple et réactive
+
+Technologies utilisées
+
+ReactJS
+
+JavaScript (TypeScript optionnel)
+
+localStorage pour l’historique
